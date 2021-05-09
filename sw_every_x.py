@@ -3,10 +3,21 @@ import csv
 import os
 
 def decimate_file(f_in, f_out, decima):
+    input_lines = None
+    output_lines = list()
+    with open(f_in, "r") as f:
+        input_lines = f.readlines()
+
+    for idx in range(0, len(input_lines), decima):
+        output_lines.append(input_lines[idx])
+
+    with open(f_out, "w") as f:
+        f.writelines(output_lines)
+
     pass
 
 def main():
-    DECIMA = 6      # Change this for decimate exry X string
+    DECIMA = 5      # Change this for decimate exry X string
 
     print("Script is started")
 
