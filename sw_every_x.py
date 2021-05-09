@@ -14,8 +14,6 @@ def decimate_file(f_in, f_out, decima):
     with open(f_out, "w") as f:
         f.writelines(output_lines)
 
-    pass
-
 def main():
     DECIMA = 5      # Change this for decimate exry X string
 
